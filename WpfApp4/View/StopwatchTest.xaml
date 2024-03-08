@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="WpfApp4.View.StopwatchTest"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp4.View"   
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="LightBlue" x:Name="Mygrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="1" Margin="247,0,0,0" Name="startProgramm" Content="Start Locker VS Mutex VS Monitor" Click="startProgramm_Click" Grid.ColumnSpan="2"></Button>
+        <TextBox x:Name="iterationsCountTextBox" Grid.Row="0" Grid.Column="1" PreviewTextInput="iterationsCountTextBox_PreviewTextInput" ></TextBox>
+        <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Enter Iteration(default 1000000)" ></Label>
+
+        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Locker mls"></Label>
+        <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Monitor mls"></Label>
+        <Label Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Mutex mls"></Label>
+
+        <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding LockerTime}"></Label>
+        <Label Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding MonitorTime}"></Label>
+        <Label Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding MutexTime}"></Label>
+
+
+        <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding LockerCounter}"></Label>
+        <Label Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding MonitorCounter}"></Label>
+        <Label Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding MutexCounter}"></Label>
+        <CheckBox Grid.Row="3" Grid.Column="2" ToolTip="Select сheck display сounter" Margin="0,0,15,0" x:Name="withCounterChBox" Background="White" HorizontalAlignment="Right" VerticalAlignment="Center"></CheckBox>
+    </Grid>
+</UserControl>

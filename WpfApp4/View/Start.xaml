@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApp4.View.Start"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4.View"
+        mc:Ignorable="d"
+        Title="Start" Height="450" Width="830" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Button Height="20" Margin="5,5,5,2.5" Name="firstBooton" Content="Auto reset event" Click="firstBooton_Click"></Button>
+            <Button Height="20" Margin="5,5,5,2.5" Name="secondBooton" Content="Battle object sync" Click="secondBooton_Click"></Button>
+            <Button Height="20" Margin="5,5,5,2.5" Name="Fourth" Content="Mutex" Click="Fourth_Click"></Button>
+            <Button Height="25" Margin="5,5,5,2.5" x:Name="semafor"  Content="Semafor slim" Click="semafor_Click"></Button>
+            <Button Height="25" Margin="5,5,5,2.5" x:Name="newApp"  Content="Start this App" Click="newApp_Click"></Button>
+        </StackPanel>
+        <ContentControl x:Name="CC" Grid.Column="1" ></ContentControl>
+
+    </Grid>
+</Window>
